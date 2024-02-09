@@ -1,0 +1,28 @@
+<template>
+    <lightning-card variant="Narrow" align="Middle"  title="Appointment Form" icon-name="standard:record">
+        
+            <lightning-input type="Text area" variant="standard" name="Subject" label="Subject" required="true" value={appRecord.Subject__c} onchange={handlechange}></lightning-input>
+        
+            <lightning-input type="Text area" variant="standard" name="Description" label="Description" required="true" value={appRecord.Description__c} onchange={handlechange}></lightning-input>
+        
+        </lightning-card>
+        <div class="slds-m-around_small ">
+            
+           
+
+        <!--     <c-customlwclookup  object-name="Contact" field-name="Contact" parentidfield="Contact__c" iconname="utility:contact" label="Contact"></c-customlwclookup>   -->
+          </div> 
+          <lightning-card variant="Narrow" align="Middle"  title="Appointment Date And Time" icon-name="utility:record"></lightning-card>
+             <lightning-input type="date" variant="standard" name="Date" label="Date"  required="true" value={appRecord.Appointment_Date__c} onchange={handlechange}></lightning-input>
+           
+              <lightning-input type="time" variant="standard" name="Time" label="Time" required="true" value={appRecord.Appointment_Time__c} onchange={handlechange}></lightning-input>
+         
+            <lightning-button  variant="brand" label="Check Availability" onclick={checkAvailability}></lightning-button>
+        
+         <div>
+        <div class="slds-col">
+            <lightning-button variant="brand"  class="slds-align_absolute-center" type="submit" label="Book Appointment" ></lightning-button>
+        </div>
+    
+    </div>
+</template>

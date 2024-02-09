@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Appointment Form">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form object-api-name="CustomObject__c">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-input-field field-name="Contact__c"></lightning-input-field>
+                        <lightning-input-field field-name="Subject__c"></lightning-input-field>
+                        <lightning-input-field field-name="Appointment_Date_Time__c" type="datetime"></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-button label="Check Availability" onclick={checkAvailability}></lightning-button>
+                    </div>
+                </div>
+                <div class="slds-p-top_medium">
+                    <lightning-textarea field-name="Description__c"></lightning-textarea>
+                </div>
+                <div class="slds-p-top_medium">
+                    <lightning-button type="submit" label="Save"></lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
